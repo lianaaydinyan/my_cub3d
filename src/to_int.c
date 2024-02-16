@@ -49,7 +49,7 @@ void	to_int(t_data *data)
 	printf("%i\n", data->height);
 	data->map = (int **)malloc(sizeof(int *) * (data->height));
 	data->widht = get_max_width(data->map_c);
-	printf("%i\n", data->widht);
+	printf("%f\n", data->widht);
 	while (++i < data->height)
 		data->map[i] = (int *)malloc(sizeof(int *) * (data->widht));
 	i = -1;

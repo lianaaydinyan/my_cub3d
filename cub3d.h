@@ -50,6 +50,8 @@ typedef struct {
 
 
 struct	s_img {
+	int		heigth;
+	int		width;
 	void	*img;
 	char	*addr;
 	int		bits_per_pixel;
@@ -137,7 +139,7 @@ struct s_data
 	double dir_y;
 	double pos_x;
 	double pos_y;
-	t_img	imgg;
+	t_img	*imgg;
 	t_hero	*hero;
 	t_ray	*ray;
 	t_game	*game;
@@ -181,4 +183,11 @@ void	raycasting(t_data *data);
 void	*mlx_xpm_file_to_image(void *mlx_ptr, char *filename,
 			       int *width, int *height);
 				   
+
+
+
+void my_mlx_pixel_put(t_data *data, int x, int y, int color);
+
+void coloring(t_data *data);
+
 #endif
